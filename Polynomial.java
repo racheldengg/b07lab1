@@ -28,16 +28,16 @@ public class Polynomial {
 	    		sum.coefficients[i] = other.coefficients[i] + coefficients[i];
 	    	}
 	    	return sum;
-	    }
-	    else
-	    {
-	    	Polynomial sum = new Polynomial(other.coefficients);
+	}
+	else
+	{
+		Polynomial sum = new Polynomial(other.coefficients);
 	    	for (int i = 0; i<coefficients.length; i++)
 	    	{
 	    		sum.coefficients[i] = other.coefficients[i] + coefficients[i];
 	    	}
 	    	return sum;
-	    }
+	}
 	}
 
 	public double evaluate(double x)
