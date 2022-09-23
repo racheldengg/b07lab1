@@ -24,20 +24,20 @@ public class Polynomial {
 			//make a new array of length coefficients.length
 			Polynomial sum = new Polynomial(coefficients);
 			for( int i = 0; i<other.coefficients.length; i++)
-	    	{
-	    		sum.coefficients[i] = other.coefficients[i] + coefficients[i];
-	    	}
-	    	return sum;
-	}
-	else
-	{
-		Polynomial sum = new Polynomial(other.coefficients);
-	    	for (int i = 0; i<coefficients.length; i++)
-	    	{
-	    		sum.coefficients[i] = other.coefficients[i] + coefficients[i];
-	    	}
-	    	return sum;
-	}
+	    		{
+	    			sum.coefficients[i] = other.coefficients[i] + coefficients[i];
+	    		}
+	    		return sum;
+		}
+		else
+		{
+			Polynomial sum = new Polynomial(other.coefficients);
+			for (int i = 0; i<coefficients.length; i++)
+			{
+				sum.coefficients[i] = other.coefficients[i] + coefficients[i];
+			}
+			return sum;
+		}
 	}
 
 	public double evaluate(double x)
@@ -49,11 +49,11 @@ public class Polynomial {
 	            result = result + Math.pow(x, i) * coefficients[i];
 	        }
 	        return result;
-	    }
+	}
 	    
-	    public boolean hasRoot(double x)
-	    {
-	        double result = evaluate(x);
+	public boolean hasRoot(double x)
+	{
+		double result = evaluate(x);
 	        if (result == 0)
 	        {
 	            return true;
@@ -62,6 +62,6 @@ public class Polynomial {
 	        {
 	            return false;
 	        }
-	    }
+	}
 
 }
